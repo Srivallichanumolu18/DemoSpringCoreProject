@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Auto Wiring->Employee using Constructor Injection -->
+<bean id="restaurantbean" class="AutoWiringDemo.Restaurant">
+    <constructor-arg value="KFC"></constructor-arg>
+    <constructor-arg value="Vijayawada"></constructor-arg>
+    <constructor-arg value="100"></constructor-arg>
+    <constructor-arg value="4"></constructor-arg>
+    <constructor-arg ref="chefbean"></constructor-arg>
+</bean>
+
+<!-- Auto Wiring->Address -->
+<bean id="chefbean" class="AutoWiringDemo.Chef">
+    <constructor-arg value="Srivalli"></constructor-arg>
+    <constructor-arg value="5"></constructor-arg>
+    <constructor-arg value="ItalianCuisine"></constructor-arg>
+    <constructor-arg value="20"></constructor-arg>
+    <constructor-arg value="Indian"></constructor-arg>
+</bean>
+
+
+
+
+
+
+</beans>
